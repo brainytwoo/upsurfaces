@@ -5,10 +5,12 @@ Static, single-page marketing site built with **Tailwind CSS** (precompiled), **
 ## Project Structure
 ```
 /
-├─ index.html       # Single-page site
-├─ output.css       # Compiled Tailwind CSS (no CDN)
-├─ logic.js         # Toast + Netlify form submit & button state
-└─ netlify.toml     # Netlify config (headers, build, etc.)
+├─ index.html         # Single-page site
+├─ netlify.toml       # Netlify config (headers, build, etc.)
+/ images              # Images, Logos, etc
+/ src
+  ├─ styles.css       # Compiled Tailwind CSS (no CDN)
+  └─ logic.js         # Toast + Netlify form submit & button state
 ```
 
 ## Local Development
@@ -25,7 +27,7 @@ npx serve .
 Then visit `http://localhost:8080`.
 
 ## Tailwind (Production-First)
-The site uses the **compiled** stylesheet `output.css`.  
+The site uses the **compiled** stylesheet `styles.css`.  
 If you ever want to change or rebuild Tailwind from source, add a `src/input.css` and run the CLI:
 
 ```bash
@@ -35,13 +37,13 @@ npm install -D tailwindcss
 npx tailwindcss init
 
 # Example build command
-npx tailwindcss -i ./src/input.css -o ./output.css --minify
+npx tailwindcss -i ./src/input.css -o ./src/styles.css --minify
 ```
 
-> The current repo is ready to deploy without a Node build step; `output.css` is already minified.
+> The current repo is ready to deploy without a Node build step; `styles.css` is already minified.
 
 ## Deploying to Netlify
-1. Create a new site on Netlify and **drag-and-drop** the folder or connect a repo.  
+1. Create a new site on Netlify and connect a repo or **drag-and-drop** index.html, netlify.toml, /images ( all images ), /src ( styles.css, logic.js )
 2. Ensure the **Publish directory** is the project root (since `index.html` is at `/`).  
 3. Netlify will read `netlify.toml` for security headers.
 
@@ -78,7 +80,7 @@ All content is in `index.html`. Common edits:
 ## Performance Tips
 - Use the web-optimized images we generated (e.g., `*-small.jpg`, `*-medium.jpg`, `*-large.jpg`).
 - Prefer `<img loading="lazy">` for below-the-fold images.
-- Keep `output.css` as the single minified stylesheet.
+- Keep `styles.css` as the single minified stylesheet.
 
 ## Accessibility
 - Provide meaningful `alt` text on all images.
