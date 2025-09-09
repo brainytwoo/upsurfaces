@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>UP Surfaces</title>
+  <link href="src/styles.css" rel="stylesheet">
+  <style>html,body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}</style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-notxt.PNG"/>
+</head>
+<body class="bg-black text-zinc-100">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 border-b border-white/10 bg-black/85 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+    <!-- Brand -->
+    <a href="#home" class="flex items-center gap-3">
+      <img src="images/logo-notxt.PNG" alt="UP Surfaces logo" class="h-10 w-auto select-none" draggable="false"/>
+      <span class="font-semibold tracking-tight text-lg">UP Surfaces</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-300">
+      <a class="hover:text-white cursor-pointer" href="#services">Services</a>
+      <a class="hover:text-white cursor-pointer" href="#pricing">Pricing</a>
+      <a class="hover:text-white cursor-pointer" href="#difference">Why Us</a>
+      <a class="hover:text-white cursor-pointer" href="#faq">FAQs</a>
+      <a class="hover:text-white cursor-pointer" href="#contact">Contact</a>
+    </nav>
+
+    <!-- CTA (desktop) -->
+    <div class="hidden md:flex items-center gap-3">
+      <a href="#contact" class="cursor-pointer rounded-2xl px-4 py-2 bg-amber-500 hover:bg-amber-400 text-black font-medium">
+        906-242-6500
+      </a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button id="menuBtn" class="md:hidden grid place-items-center h-10 w-10 rounded-xl border border-white/15 text-zinc-200"
+            aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobileNav" aria-modal="true" role="dialog" class="md:hidden hidden border-t border-white/10 bg-black/95">
+    <div class="mx-auto max-w-6xl px-4 py-3 grid gap-1 text-zinc-200">
+      <a class="py-2 hover:text-white" href="#services">Services</a>
+      <a class="py-2 hover:text-white" href="#pricing">Pricing</a>
+      <a class="py-2 hover:text-white" href="#difference">Why Us</a>
+      <a class="py-2 hover:text-white" href="#faq">FAQs</a>
+      <a class="py-2 hover:text-white" href="#contact">Contact</a>
+      <a class="mt-2 rounded-2xl px-4 py-2 bg-amber-500 hover:bg-amber-400 text-black font-medium" href="#contact">
+        906-242-6500
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="overflow-x-clip">
+  <div class="mx-auto max-w-6xl px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+   <div class="relative">
+      <!-- Watermark logo -->
+      <img src="images/logo.png" alt="UP Surfaces logo"
+          class="absolute -left-12 top-8 inset-0 m-auto w-[80%] sm:w-[100%] lg:w-[110%] max-w-full opacity-10 pointer-events-none select-none" />
+
+      <!-- Text on top of watermark -->
+      <div class="relative">
+        <div class="mt-4 text-3xl/tight sm:text-4xl lg:text-5xl font-extrabold">
+          <span class="text-amber-400">We Create</span>
+          <h1 class="mt-4 text-3xl/tight sm:text-4xl lg:text-5xl font-extrabold">
+            Surfaces that look sharp and last through
+          </h1>
+          <span class="text-amber-400">Northern Winters</span>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-2 text-xs">
+          <a href="#resin" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Resin-Bonded Gravel</a>
+          <a href="#pavers" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Paver Paths & Patios</a>
+          <a href="#repair" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Concrete Repair</a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#services"
+                  class="cursor-pointer rounded-2xl px-5 py-3 border border-white/15 hover:bg-white/5">
+            What We Do
+          </a>
+          <a href="#contact"
+                  class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium">
+            Get a Quote
+          </a>
+        </div>
+
+        <p class="mt-5 text-sm text-zinc-400">Serving: Marquette • Ishpeming • Negaunee • Harvey • Chocolay • Gwinn</p>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="relative rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl">
+      <!-- soft ambient glow -->
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -bottom-16 -right-12 h-96 w-72 rounded-full bg-orange-400/20 blur-3xl"></div>
+      </div>
+      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 grid place-items-center text-sm text-zinc-400">
+        <img src="images/paver-1.jpg" alt="Elegant paver patio" class="opacity-[.85] object-cover h-full w-full">
+      </div>
+      <div class="mt-3 grid grid-cols-2 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
+          <img src="images/resinbonded-2.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
+          <img src="images/resinbonded-3.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="mx-auto max-w-6xl lg:py-24 scroll-mt-24">
+  <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+    <a href="#resin" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+      <div class="aspect-square bg-neutral-900 grid place-items-center text-sm text-zinc-400">
+        <img src="images/resinbonded-1.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+      </div>
+      <div class="p-4">
+        <div class="font-medium">Resin Bonded Gravel</div>
+        <p class="text-sm text-zinc-300">Seamless blend of stone and resin that renews damaged concrete or asphalt while adding a durable, decorative finish with a modern look.</p>
+      </div>
+    </a>
+    <a href="#pavers" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+      <div class="aspect-square bg-neutral-900 grid place-items-center text-sm text-zinc-400">
+        <img src="images/paver-2.jpg" alt="Paver Patio" class="opacity-[.85] object-cover h-full w-full">
+      </div>
+      <div class="p-4">
+        <div class="font-medium">Paver Paths & Patios</div>
+        <p class="text-sm text-zinc-300">Create durable, low-maintenance outdoor spaces that bring a clean, modern look to walkways, gardens, and gathering areas.</p>
+      </div>
+    </a>
+    <a href="#repair" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+      <div class="aspect-square bg-neutral-900 grid place-items-center text-sm text-zinc-400">
+        <img src="images/repair-1.jpg" alt="Concrete Repair" class="opacity-[.85] object-cover h-full w-full">
+      </div>
+      <div class="p-4">
+        <div class="font-medium">Concrete Repair</div>
+        <p class="text-sm text-zinc-300">Seal and stabilize damaged areas, preventing further deterioration, extending the life of the slab, and restoring much of its original appearance.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- RESIN -->
+<section id="resin" class="overflow-x-clip">
+  <div class="mx-auto max-w-6xl px-4 pt-24 grid lg:grid-cols-2 gap-10 items-center">
+    <div class="relative">
+      <!-- soft ambient glows -->
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -top-12 -left-16 h-72 w-72 rounded-full bg-amber-500/20 blur-3xl"></div>
+      </div>
+
+      <div class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
+        <span class="text-amber-400">Resin Bonded Gravel</span>
+        <h2 class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
+          A Surface that Looks Sharp and Lasts
+        </h2>
+      </div>
+
+      <p class="mt-4 text-zinc-300 max-w-xl">
+        Resin-Bonded gravel is a blend of stone and resin that renews damaged concrete or asphalt while adding a durable, decorative finish with a modern look.
+      </p>
+
+      <div class="mt-8 flex flex-wrap">
+        <a href="#contact" class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Visual (swap with real photos later) -->
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl">
+      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 grid place-items-center text-sm text-zinc-400">
+        <img src="images/resinbonded-6.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+      </div>
+      <div class="mt-3 grid grid-cols-2 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
+          <img src="images/resinbonded-5.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
+          <img src="images/resinbonded-4.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- RESIN how it works -->
+<section id="resinworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
+  <ol class="mt-6 grid gap-4 lg:grid-cols-4">
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 1</div>
+      <div class="mt-2 font-medium">Site visit & base check (concrete/asphalt integrity)</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 2</div>
+      <div class="mt-2 font-medium">Choose a color blend & set the border/edges</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 3</div>
+      <div class="mt-2 font-medium">Mix kiln‑dried aggregates with UV‑stable resin</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 4</div>
+      <div class="mt-2 font-medium">Trowel, compact, and cure (ready for foot traffic in ~6–8 hrs)</div>
+    </li>
+  </ol>
+</section>
+
+<!-- PAVERS -->
+<section id="pavers" class="overflow-x-clip">
+  <div class="mx-auto max-w-6xl px-4 pt-24 grid lg:grid-cols-2 gap-10 items-center">
+    <!-- Visual (swap with real photos later) -->
+    <div class="relative rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl">
+      <!-- soft ambient glows -->
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -top-12 -left-12 h-72 w-72 rounded-full bg-amber-500/20 blur-3xl"></div>
+      </div>
+      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 grid place-items-center text-sm text-zinc-400">
+        <img src="images/paver-3.jpg" alt="Paver Patio" class="opacity-[.85] object-cover h-full w-full">
+      </div>
+      <div class="mt-3 grid grid-cols-2 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
+          <img src="images/paver-4.jpg" alt="Paver Patio" class="opacity-[.85] object-cover h-full w-full">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
+          <img src="images/paver-5.jpg" alt="Paver Patio" class="opacity-[.85] object-cover h-full w-full">
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
+        <span class="text-amber-400">Paver Paths and Patios</span>
+        <h2 class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
+          Seamlessly blend Durability with Timeless Style
+        </h2>
+      </div>
+
+      <p class="mt-4 text-zinc-300 max-w-xl">
+        Paver Paths and Patios offer a versatile, attractive surface that resists shifting and wear while enhancing outdoor spaces with a timeless, modern appeal.
+      </p>
+
+      <div class="mt-8 flex flex-wrap">
+        <a href="#contact" class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PAVERS how it works -->
+<section id="paverworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
+  <ol class="mt-6 grid gap-4 lg:grid-cols-4">
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 1</div>
+      <div class="mt-2 font-medium">Site visit, layout planning, and base prep (grading and compaction)</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 2</div>
+      <div class="mt-2 font-medium">Set borders, edge restraints, and prepare the bedding sand layer</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 3</div>
+      <div class="mt-2 font-medium">Lay pavers in the chosen pattern, cutting edges for a precise fit</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 4</div>
+      <div class="mt-2 font-medium">Compact, sweep in joint sand, and seal for stability and long-lasting finish</div>
+    </li>
+  </ol>
+</section>
+
+<!-- REPAIR -->
+<section id="repair" class="overflow-x-clip">
+  <div class="mx-auto max-w-6xl px-4 pt-24 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <div class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
+        <span class="text-amber-400">Concrete Repair</span>
+        <h2 class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
+          Protect and Restore to near Original form
+        </h2>
+      </div>
+
+      <p class="mt-4 text-zinc-300 max-w-xl">
+        Restore strength and extend life with concrete crack and edge repair that protects while reviving the original look.
+      </p>
+
+      <div class="mt-8 flex flex-wrap">
+        <a href="#contact" class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Visual (swap with real photos later) -->
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl">
+      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 grid place-items-center text-sm text-zinc-400">
+        <img src="images/repair-3.jpg" alt="Concrete Repair" class="opacity-[.85] object-cover h-full w-full">
+      </div>
+      <div class="mt-3 grid grid-cols-2 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
+          <img src="images/repair-4.jpg" alt="Concrete Repair" class="opacity-[.85] object-cover h-full w-full">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
+          <img src="images/repair-5.jpg" alt="Concrete Repair" class="opacity-[.85] object-cover h-full w-full">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- REPAIR how it works -->
+<section id="repairworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
+  <ol class="mt-6 grid gap-4 lg:grid-cols-4">
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 1</div>
+      <div class="mt-2 font-medium">Site visit, clean and prep cracks or damaged edges</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 2</div>
+      <div class="mt-2 font-medium">Fill with high-strength repair material</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 3</div>
+      <div class="mt-2 font-medium">Smooth, level, and blend the repair</div>
+    </li>
+    <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div class="text-amber-400 text-sm">Step 4</div>
+      <div class="mt-2 font-medium">Cure and finish for a lasting look</div>
+    </li>
+  </ol>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="mx-auto max-w-6xl px-4 pt-24 pb-16 scroll-mt-24">
+  <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-8">
+    <h2 class="text-2xl font-semibold">Transparent pricing</h2>
+    <p class="mt-2 text-zinc-300">Most projects range from <span class="font-medium text-white">$12–320 per sq ft</span>. Site prep, depth, materials, and finish affect final price. While there are many variables, we provide an <span class="font-medium text-white">itemized, firm quote guaranteed for 30 days</span> after your site visit.</p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="#contact" class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-900 font-medium">Get a Quote</a>
+      <a href="#faq" class="cursor-pointer rounded-2xl px-5 py-3 border border-white/15 hover:bg-white/5">Read FAQs</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section id="difference" class="max-w-6xl mx-auto px-4 py-16">
+  <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
+    <h2 class="text-2xl font-semibold">What makes us different</h2>
+    <p class="mt-2 text-zinc-300">With years of experience in northern climates, we understand what it takes for outdoor surfaces to withstand harsh weather and still look great. Our focus is on proper base work, durable materials, and finishes that hold up over time.</p>
+    <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-zinc-300">
+      <li>✔️ Built for freeze-thaw cycles and snow removal</li>
+      <li>✔️ Careful prep work before every install or repair</li>
+      <li>✔️ High-quality materials chosen for strength and longevity</li>
+      <li>✔️ Clear communication and dependable service from start to finish</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="mx-auto max-w-6xl px-4 py-16 scroll-mt-24">
+  <h2 class="text-2xl font-semibold">FAQs</h2>
+  <div class="mt-6 grid gap-4">
+    <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <summary class="cursor-pointer font-medium">How long does installation take?</summary>
+      <p class="mt-2 text-sm text-zinc-300">Most projects are completed in 1–2 days once the base is ready, though larger areas or complex layouts may take longer.</p>
+    </details>
+    <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <summary class="cursor-pointer font-medium">Do you replace old surfaces or work over them?</summary>
+      <p class="mt-2 text-sm text-zinc-300">We can repair and refinish existing concrete or asphalt, or build new paver installations depending on your site’s condition.</p>
+    </details>
+    <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <summary class="cursor-pointer font-medium">How do your surfaces hold up in winter?</summary>
+      <p class="mt-2 text-sm text-zinc-300">All of our work is designed for freeze–thaw cycles and snow removal, using materials that perform well in northern climates.</p>
+    </details>
+    <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <summary class="cursor-pointer font-medium">What’s included in the quote?</summary>
+      <p class="mt-2 text-sm text-zinc-300">Every quote is itemized and firm for 30 days, covering site prep, materials, and labor — no hidden costs.</p>
+    </details>
+    <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <summary class="cursor-pointer font-medium">How soon can you start my project?</summary>
+      <p class="mt-2 text-sm text-zinc-300">Lead times are typically 2–4 weeks during peak season; we’ll confirm your schedule during the site visit.</p>
+    </details>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="mx-auto max-w-6xl px-4 py-16 scroll-mt-24">
+  <div class="grid lg:grid-cols-2 gap-8">
+    <div>
+      <h2 class="text-2xl font-semibold">Request a free site visit</h2>
+      <p class="mt-2 text-zinc-300">Tell us about your project and we’ll get back to you within the business week.</p>
+      <ul class="mt-4 text-sm text-zinc-300 list-disc list-inside">
+        <li>Typical lead time: 2–4 weeks during peak season</li>
+      </ul>
+      <div class="mt-6 text-sm text-zinc-400">
+        <div><span class="text-zinc-300">Email:</span> <a href="mailto:contact@upsurfaces.com" class="underline decoration-dotted">contact@upsurfaces.com</a></div>
+        <div class="mt-1"><span class="text-zinc-300">Phone:</span> <a href="tel:+19062426500" class="underline decoration-dotted">(906) 242‑6500</a></div>
+      </div>
+    </div>
+
+    <!-- Contact form (Netlify Forms) -->
+    <form id="contactForm"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="grid gap-4 max-w-md mx-auto bg-white/5 border border-white/10 p-6 rounded-2xl">
+
+      <!-- Netlify needs this hidden pair -->
+      <input type="hidden" name="form-name" value="contact">
+      <!-- Honeypot (spam trap) -->
+      <p class="hidden">
+        <label>Don’t fill this out: <input name="bot-field"></label>
+      </p>
+
+      <div>
+        <label for="name" class="block text-sm mb-1">Name</label>
+        <input name="name" autocomplete="name" required class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2" placeholder="Your name"/>
+      </div>
+      <div>
+        <label for="email" class="block text-sm mb-1">Email</label>
+        <input type="email" name="email" autocomplete="email" required class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2" placeholder="you@example.com"/>
+      </div>
+      <div>
+        <label for="phone" class="block text-sm mb-1">Phone</label>
+        <input name="phone" autocomplete="tel" class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2" placeholder="(xxx) xxx‑xxxx"/>
+      </div>
+      <div>
+        <label class="block text-sm mb-1" for="city">Project Location (city)</label>
+        <div class="relative">
+          <select id="city" name="city" required
+            class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2 pr-10 appearance-none">
+            <option value="" disabled selected>Select a city</option>
+            <optgroup label="Marquette County">
+              <option>Marquette</option>
+              <option>Negaunee</option>
+              <option>Ishpeming</option>
+              <option>Gwinn</option>
+              <option>Harvey</option>
+              <option>Skandia</option>
+              <option>Big Bay</option>
+            </optgroup>
+            <optgroup label="Nearby">
+              <option>Munising</option>
+              <option>Escanaba</option>
+              <option>Gladstone</option>
+              <option>Houghton</option>
+              <option>Hancock</option>
+              <option>Calumet</option>
+              <option>Iron Mountain</option>
+              <option>Kingsford</option>
+              <option>Manistique</option>
+              <option>Menominee</option>
+              <option>Sault Ste. Marie</option>
+            </optgroup>
+            <option value="other">Other</option>
+          </select>
+
+          <!-- chevron -->
+          <svg aria-hidden="true"
+              class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 opacity-70"
+              viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z"/>
+          </svg>
+        </div>
+      </div>
+      <!-- Only shown if “Other” is selected -->
+      <div>
+        <input id="cityOther" name="city_other" aria-hidden="true" aria-placeholder="Enter your city" class="hidden w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2" placeholder="Enter your city"/>
+      </div>
+      <div>
+        <label for="details" class="block text-sm mb-1">Project details</label>
+        <textarea name="details" required minlength="10" rows="4" class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2" placeholder="Driveway or walkway? Approximate dimensions? New or existing base?"></textarea>
+      </div>
+      
+      <!-- optional metadata -->
+      <input type="hidden" name="source" value="upsurfaces.com">
+      <input type="hidden" name="page"   value="/#contact">
+      
+      <div data-netlify-recaptcha="true"></div>
+
+      <button id="submitBtn" type="submit"
+        class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium">
+        Send Request
+      </button>
+    
+      <p class="text-xs text-zinc-400">By submitting, you consent to be contacted about your project. No spam—ever.</p>
+      
+      <p id="formMsg" class="hidden text-sm mt-2"></p>
+    </form>
+  </div>
+</section>
+
+<!-- Toast -->
+<div id="toast" class="fixed bottom-4 inset-x-0 md:inset-auto md:right-4 md:bottom-4 z-50 hidden">
+  <div id="toastCard"
+       class="mx-auto md:ml-auto max-w-md rounded-xl border border-white/10 bg-neutral-900/90 backdrop-blur
+              px-4 py-3 shadow-xl flex items-start gap-3 transition
+              opacity-0 translate-y-2">
+    <div id="toastIcon" class="mt-0.5">
+      <!-- filled by JS -->
+    </div>
+    <div class="text-sm text-zinc-100" id="toastText"></div>
+    <button id="toastClose" class="ml-auto text-zinc-400 hover:text-white" aria-label="Close">
+      &times;
+    </button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-zinc-400 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+    
+    <!-- Logo + copyright -->
+    <div class="flex items-center gap-2">
+      <img src="images/logo-notxt.png" alt="UP Surfaces logo" class="h-6 w-auto"/>
+      <span>© <span id="year"></span> UP Surfaces. All rights reserved.</span>
+    </div>
+
+    <!-- Quick links -->
+    <nav class="flex gap-4">
+      <a href="#services" class="hover:text-white">Services</a>
+      <a href="#faq" class="hover:text-white">FAQs</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+
+    <!-- Contact -->
+    <div class="flex flex-col md:items-end">
+      <a href="tel:+19062426500" class="hover:text-white">906-242-6500</a>
+      <a href="mailto:contact@upsurfaces.com" class="hover:text-white">contact@upsurfaces.com</a>
+      <span class="text-xs text-zinc-500">Serving the Upper Peninsula</span>
+    </div>
+
+  </div>
+</footer>
+
+<script src="src/logic.js" defer></script>
+
+</body>
+</html>
