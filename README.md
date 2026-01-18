@@ -1,85 +1,84 @@
-UP Surfaces Website
+# UP Surfaces Website
 
-This repository contains the source code for upsurfaces.com, the official website for UP Surfaces, a metal roofing business based in Michigan’s Upper Peninsula.
+Source code for **upsurfaces.com**, the official website for UP Surfaces — a metal roofing company based in Michigan’s Upper Peninsula.
 
-The site is designed to be fast, simple, and dependable—just like the work it represents.
+Built to be fast, simple, and reliable.
 
-Overview
+---
 
-Static, performance-focused website
+## Overview
 
-Built specifically for a small local service business
+- Static, performance-focused website
+- Designed for a local service business
+- Mobile-first and easy to maintain
+- Deployed on Netlify
 
-Mobile-first and easy to maintain
+---
 
-Deployed on Netlify
+## Tech Stack
 
-The site showcases services, pricing expectations, FAQs, and includes a contact form for quote requests.
+- HTML
+- Tailwind CSS (compiled to `output.css`)
+- Vanilla JavaScript
+- Netlify (hosting, forms, and security headers)
 
-Tech Stack
+---
 
-HTML – Clean, semantic structure
+## Key Features
 
-Tailwind CSS – Utility-first styling, compiled and minified
+- Fully responsive layout
+- Standing seam metal roofing service pages
+- Repair and accessory sections
+- Netlify Forms contact form with reCAPTCHA
+- Toast notifications for form feedback
+- Strong security headers
+- Minimal JavaScript, no frameworks
 
-Vanilla JavaScript – Lightweight UI logic (menu, form handling, toasts)
+---
 
-Netlify – Hosting, builds, security headers, and form handling
+## Project Structure
 
-No frameworks. No bloat.
-
-Key Features
-
-Responsive layout (desktop, tablet, mobile)
-
-Standing seam roofing service pages
-
-Repair and accessory sections
-
-Netlify Forms contact form with reCAPTCHA
-
-Toast notifications for form feedback
-
-Strong security headers via Netlify
-
-Optimized images and minimal JS
-
-Project Structure
+```
 /
 ├─ src/
-│  ├─ input.css        # Tailwind input
-│  ├─ output.css       # Compiled Tailwind output
-│  ├─ logic.js         # UI + form logic
+│  ├─ input.css
+│  ├─ output.css
+│  ├─ logic.js
 │
-├─ images/             # Site images & logos
-├─ index.html          # Main site file
-├─ netlify.toml        # Netlify build & security config
+├─ images/
+├─ index.html
+├─ netlify.toml
+```
+---
 
-Local Development
+## Local Development
 
-Install dependencies (Tailwind CLI)
+Build Tailwind CSS:
 
-Run Tailwind build:
-
+```bash
 npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+```
 
+Open `index.html` in your browser.
 
-Open index.html in a browser
+---
 
-Deployment
+## Deployment
 
-Automatically built and deployed via Netlify
+- Automatically built and deployed via Netlify
+- Tailwind compiled and minified during build
+- Security headers applied at the CDN level
 
-Tailwind is compiled and minified during build
+---
 
-Security headers enforced at the CDN level
+## Notes
 
-Notes
+This project is intentionally framework-free.  
+No React, no heavy build tooling — just fast, predictable HTML, CSS, and JavaScript.
 
-This repo is intentionally simple.
-It’s meant to be reliable, easy to update, and fast—not a framework experiment.
+---
 
-License
+## License
 
-Private project.
+Private project.  
 Not licensed for reuse or redistribution.
