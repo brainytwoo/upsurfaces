@@ -1,101 +1,85 @@
-# UP Surfaces — Website
+UP Surfaces Website
 
-Static, single-page marketing site built with **Tailwind CSS** (precompiled), **Netlify Forms**, and a small JS file for UI (toast + form submit/disable).
+This repository contains the source code for upsurfaces.com, the official website for UP Surfaces, a metal roofing business based in Michigan’s Upper Peninsula.
 
-## Project Structure
-```
+The site is designed to be fast, simple, and dependable—just like the work it represents.
+
+Overview
+
+Static, performance-focused website
+
+Built specifically for a small local service business
+
+Mobile-first and easy to maintain
+
+Deployed on Netlify
+
+The site showcases services, pricing expectations, FAQs, and includes a contact form for quote requests.
+
+Tech Stack
+
+HTML – Clean, semantic structure
+
+Tailwind CSS – Utility-first styling, compiled and minified
+
+Vanilla JavaScript – Lightweight UI logic (menu, form handling, toasts)
+
+Netlify – Hosting, builds, security headers, and form handling
+
+No frameworks. No bloat.
+
+Key Features
+
+Responsive layout (desktop, tablet, mobile)
+
+Standing seam roofing service pages
+
+Repair and accessory sections
+
+Netlify Forms contact form with reCAPTCHA
+
+Toast notifications for form feedback
+
+Strong security headers via Netlify
+
+Optimized images and minimal JS
+
+Project Structure
 /
-├─ index.html         # Single-page site
-├─ netlify.toml       # Netlify config (headers, build, etc.)
-/ images              # Images, Logos, etc
-/ src
-  ├─ styles.css       # Compiled Tailwind CSS (no CDN)
-  └─ logic.js         # Toast + Netlify form submit & button state
-```
+├─ src/
+│  ├─ input.css        # Tailwind input
+│  ├─ output.css       # Compiled Tailwind output
+│  ├─ logic.js         # UI + form logic
+│
+├─ images/             # Site images & logos
+├─ index.html          # Main site file
+├─ netlify.toml        # Netlify build & security config
 
-## Local Development
-You don’t need Node to view the site — just open `index.html` in a browser.
-For a nicer local server (SPA routing, CORS-safe), run one of:
+Local Development
 
-```bash
-# Python 3
-python3 -m http.server 8080
+Install dependencies (Tailwind CLI)
 
-# or Node (if installed)
-npx serve .
-```
-Then visit `http://localhost:8080`.
+Run Tailwind build:
 
-## Tailwind (Production-First)
-The site uses the **compiled** stylesheet `styles.css`.  
-If you ever want to change or rebuild Tailwind from source, add a `src/input.css` and run the CLI:
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 
-```bash
-# Initialize once
-npm init -y
-npm install -D tailwindcss
-npx tailwindcss init
 
-# Example build command
-npx tailwindcss -i ./src/input.css -o ./src/styles.css --minify
-```
+Open index.html in a browser
 
-> The current repo is ready to deploy without a Node build step; `styles.css` is already minified.
+Deployment
 
-## Deploying to Netlify
-1. Create a new site on Netlify and connect a repo or **drag-and-drop** index.html, netlify.toml, /images ( all images ), /src ( styles.css, logic.js )
-2. Ensure the **Publish directory** is the project root (since `index.html` is at `/`).  
-3. Netlify will read `netlify.toml` for security headers.
+Automatically built and deployed via Netlify
 
-### Custom Domain
-- Add `upsurfaces.com` in **Site settings → Domain management**, and update DNS to point at Netlify.
+Tailwind is compiled and minified during build
 
-## Contact Form (Netlify Forms)
-- The form in `index.html` is configured for **Netlify Forms** (no server needed).
-- `logic.js` handles:
-  - Preventing multiple submissions (disable + “Sending…” → “Complete”)
-  - Submitting via `fetch` to `/`
-  - Showing a success/error **toast** (no redirect)
+Security headers enforced at the CDN level
 
-### Email Notifications
-After first deploy and a test submission:
-1. Go to **Netlify → Forms → contact**.
-2. **Notifications → Add notification → Email**.
-3. Enter your Workspace address (e.g. `contact@upsurfaces.com` or `info@upsurfaces.com`).
+Notes
 
-### Spam Protection
-- A honeypot field is included.
-- Optionally enable **reCAPTCHA** in Netlify and add:
-  ```html
-  <div data-netlify-recaptcha="true"></div>
-  ```
-  above the submit button.
+This repo is intentionally simple.
+It’s meant to be reliable, easy to update, and fast—not a framework experiment.
 
-## Editing Site Content
-All content is in `index.html`. Common edits:
-- **Services/steps/pricing**: update the relevant sections and copy.
-- **Logos & images**: replace file paths used in hero/gallery.
-- **Footer contact**: update phone/email once, links auto-work.
+License
 
-## Performance Tips
-- Use the web-optimized images we generated (e.g., `*-small.jpg`, `*-medium.jpg`, `*-large.jpg`).
-- Prefer `<img loading="lazy">` for below-the-fold images.
-- Keep `styles.css` as the single minified stylesheet.
-
-## Accessibility
-- Provide meaningful `alt` text on all images.
-- Maintain sufficient color contrast (current palette passes typical checks).
-- Ensure button text is descriptive (“Get a quote”, “Send request”, etc.).
-
-## Troubleshooting
-- **Form not appearing in Netlify → Forms**:  
-  - Ensure the form has `name="contact"`, `data-netlify="true"`, and the hidden `form-name` input matches.  
-  - Make at least **one live submission** after deploy to register the form.
-- **No email after submit**:  
-  - Add a Netlify form notification to your Workspace address.  
-  - Check spam/filters in Gmail and Netlify activity log.
-- **Button stays disabled**:  
-  - Check `logic.js` for errors in the browser console; the error path re-enables the button.
-
-## License
-Private/commercial — UP Surfaces. All rights reserved.
+Private project.
+Not licensed for reuse or redistribution.
