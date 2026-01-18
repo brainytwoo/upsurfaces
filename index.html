@@ -4,10 +4,10 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>UP Surfaces</title>
-  <link href="src/styles.css" rel="stylesheet">
+  <link href="src/output.css" rel="stylesheet">
   <style>html,body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}</style>
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo-notxt.PNG"/>
+  <link rel="icon" type="image/webp" href="images/logo-notxt.webp"/>
 </head>
 <body class="bg-black text-zinc-100">
 
@@ -16,7 +16,7 @@
   <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
     <!-- Brand -->
     <a href="#home" class="flex items-center gap-3">
-      <img src="images/logo-notxt.PNG" alt="UP Surfaces logo" class="h-10 w-auto select-none" draggable="false"/>
+      <img loading="lazy" src="images/logo-notxt.webp" alt="UP Surfaces logo" class="h-10 w-auto select-none" draggable="false"/>
       <span class="font-semibold tracking-tight text-lg">UP Surfaces</span>
     </a>
 
@@ -66,23 +66,23 @@
   <div class="mx-auto max-w-6xl px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
    <div class="relative">
       <!-- Watermark logo -->
-      <img src="images/logo.png" alt="UP Surfaces logo"
+      <img loading="lazy" src="images/logo.webp" alt="UP Surfaces logo"
           class="absolute -left-12 top-8 inset-0 m-auto w-[80%] sm:w-[100%] lg:w-[110%] max-w-full opacity-10 pointer-events-none select-none" />
 
       <!-- Text on top of watermark -->
       <div class="relative">
         <div class="mt-4 text-3xl/tight sm:text-4xl lg:text-5xl font-extrabold">
           <span class="text-amber-400">We Create</span>
-          <h1 class="mt-4 text-3xl/tight sm:text-4xl lg:text-5xl font-extrabold">
-            Surfaces that look sharp and last through
+          <h1 class="text-3xl/tight sm:text-4xl lg:text-5xl font-extrabold">
+            Metal Roofs
           </h1>
-          <span class="text-amber-400">Northern Winters</span>
+          <span class="text-amber-400">Built for UP Winters</span>
         </div>
 
         <div class="mt-6 flex flex-wrap gap-2 text-xs">
-          <a href="#resin" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Resin-Bonded Gravel</a>
-          <a href="#pavers" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Paver Paths & Patios</a>
-          <a href="#repair" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Concrete Repair</a>
+          <a href="#roofing" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Standing Seam Metal Roofing</a>
+          <a href="#repairs" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Metal Roof Repairs</a>
+          <a href="#accessories" class="cursor-pointer hover:border-amber-500 rounded-full border border-white/10 bg-white/5 px-3 py-1">Snow Guards & Trim Accessories</a>
         </div>
 
         <div class="mt-8 flex flex-wrap gap-3">
@@ -107,14 +107,14 @@
         <div class="absolute -bottom-16 -right-12 h-96 w-72 rounded-full bg-orange-400/20 blur-3xl"></div>
       </div>
       <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 grid place-items-center text-sm text-zinc-400">
-        <img src="images/paver-1.jpg" alt="Elegant paver patio" class="opacity-[.85] object-cover h-full w-full">
+        <img loading="lazy" src="images/roof-1.webp" alt="Standing Seam Roof 1" class="opacity-[.85] object-cover h-full w-full">
       </div>
       <div class="mt-3 grid grid-cols-2 gap-3">
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
-          <img src="images/resinbonded-2.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+          <img loading="lazy" src="images/roof-2.webp" alt="Standing Seam Roof 2" class="opacity-[.85] object-cover h-full w-full">
         </div>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
-          <img src="images/resinbonded-3.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+          <img loading="lazy" src="images/roof-3.webp" alt="Standing Seam Roof 3" class="opacity-[.85] object-cover h-full w-full">
         </div>
       </div>
     </div>
@@ -124,38 +124,38 @@
 <!-- SERVICES -->
 <section id="services" class="mx-auto max-w-6xl lg:py-24 scroll-mt-24">
   <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-    <a href="#resin" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-      <div class="aspect-square bg-neutral-900 grid place-items-center text-sm text-zinc-400">
-        <img src="images/resinbonded-1.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+    <a href="#roofing" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+      <div class="aspect-square bg-neutral-900 overflow-hidden">
+        <img loading="lazy" src="images/install-4.webp" alt="Standing Seam Roof" class="opacity-[.85] object-cover h-full">
       </div>
       <div class="p-4">
-        <div class="font-medium">Resin Bonded Gravel</div>
-        <p class="text-sm text-zinc-300">Seamless blend of stone and resin that renews damaged concrete or asphalt while adding a durable, decorative finish with a modern look.</p>
+        <div class="font-medium">Standing Seam Metal Roofing</div>
+        <p class="text-sm text-zinc-300">Clean, durable, and built to outlast harsh UP winters. Standing seam metal roofing gives you a sleek look, hidden fasteners, and decades of weather-tight performance.</p>
       </div>
     </a>
-    <a href="#pavers" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-      <div class="aspect-square bg-neutral-900 grid place-items-center text-sm text-zinc-400">
-        <img src="images/paver-2.jpg" alt="Paver Patio" class="opacity-[.85] object-cover h-full w-full">
+    <a href="#repairs" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+      <div class="aspect-square bg-neutral-900 overflow-hidden">
+        <img loading="lazy" src="images/repair-2-4.webp" alt="Roof Flashing Repair" class="opacity-[.85] object-cover h-full w-full">
       </div>
       <div class="p-4">
-        <div class="font-medium">Paver Paths & Patios</div>
-        <p class="text-sm text-zinc-300">Create durable, low-maintenance outdoor spaces that bring a clean, modern look to walkways, gardens, and gathering areas.</p>
+        <div class="font-medium">Metal Roof Repairs</div>
+        <p class="text-sm text-zinc-300">Fast, reliable repairs for leaks, loose seams, or damaged trim. We keep your metal roof performing like it should—tight, secure, and ready for another season.</p>
       </div>
     </a>
-    <a href="#repair" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-      <div class="aspect-square bg-neutral-900 grid place-items-center text-sm text-zinc-400">
-        <img src="images/repair-1.jpg" alt="Concrete Repair" class="opacity-[.85] object-cover h-full w-full">
+    <a href="#accessories" class="cursor-pointer hover:border-amber-500 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+      <div class="aspect-square bg-neutral-900 overflow-hidden">
+        <img loading="lazy" src="images/accessories-1.webp" alt="Accessories" class="opacity-[.85] object-cover h-full w-full">
       </div>
       <div class="p-4">
-        <div class="font-medium">Concrete Repair</div>
-        <p class="text-sm text-zinc-300">Seal and stabilize damaged areas, preventing further deterioration, extending the life of the slab, and restoring much of its original appearance.</p>
+        <div class="font-medium">Snow Guards & Trim Accessories</div>
+        <p class="text-sm text-zinc-300">Snow retention that keeps walkways safe and trims that finish the roof the right way. Built for both safety and curb appeal, and installed with the details that matter up here.</p>
       </div>
     </a>
   </div>
 </section>
 
-<!-- RESIN -->
-<section id="resin" class="overflow-x-clip">
+<!-- ROOFING -->
+<section id="roofing" class="overflow-x-clip">
   <div class="mx-auto max-w-6xl px-4 pt-24 grid lg:grid-cols-2 gap-10 items-center">
     <div class="relative">
       <!-- soft ambient glows -->
@@ -164,14 +164,14 @@
       </div>
 
       <div class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
-        <span class="text-amber-400">Resin Bonded Gravel</span>
+        <span class="text-amber-400">Standing Seam Metal Roofing</span>
         <h2 class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
-          A Surface that Looks Sharp and Lasts
+          Durable, sleek, weather-tight roofing system designed for longevity.
         </h2>
       </div>
 
       <p class="mt-4 text-zinc-300 max-w-xl">
-        Resin-Bonded gravel is a blend of stone and resin that renews damaged concrete or asphalt while adding a durable, decorative finish with a modern look.
+        Standing seam metal roofs use interlocking panels that run vertically from ridge to eave, hiding all fasteners for a clean, modern look. They’re incredibly durable, weather-tight, and built to handle heavy snow, ice, and wind for decades with minimal maintenance.
       </p>
 
       <div class="mt-8 flex flex-wrap">
@@ -181,76 +181,76 @@
       </div>
     </div>
 
-    <!-- Visual (swap with real photos later) -->
+    <!-- Visuals -->
     <div class="rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl">
       <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 grid place-items-center text-sm text-zinc-400">
-        <img src="images/resinbonded-6.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+        <img loading="lazy" src="images/install-1.webp" alt="Standing Seam Roof" class="opacity-[.85] object-cover h-full w-full">
       </div>
       <div class="mt-3 grid grid-cols-2 gap-3">
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
-          <img src="images/resinbonded-5.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+          <img loading="lazy" src="images/install-2.webp" alt="Standing Seam Roof" class="opacity-[.85] object-cover h-full w-full">
         </div>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
-          <img src="images/resinbonded-4.jpg" alt="Resin Bonded Gravel" class="opacity-[.85] object-cover h-full w-full">
+          <img loading="lazy" src="images/install-3.webp" alt="Standing Seam Roof" class="opacity-[.85] object-cover h-full w-full">
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- RESIN how it works -->
-<section id="resinworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
+<!-- ROOFING how it works -->
+<section id="roofingworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
   <ol class="mt-6 grid gap-4 lg:grid-cols-4">
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 1</div>
-      <div class="mt-2 font-medium">Site visit & base check (concrete/asphalt integrity)</div>
+      <div class="mt-2 font-medium">Roof and deck inspection to ensure a clean, solid base for panel installation.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 2</div>
-      <div class="mt-2 font-medium">Choose a color blend & set the border/edges</div>
+      <div class="mt-2 font-medium">Install underlayment, clips, and starter trim for a secure, weather-tight foundation.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 3</div>
-      <div class="mt-2 font-medium">Mix kiln‑dried aggregates with UV‑stable resin</div>
+      <div class="mt-2 font-medium">Set and fasten standing seam panels, locking them together for strength and clean lines.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 4</div>
-      <div class="mt-2 font-medium">Trowel, compact, and cure (ready for foot traffic in ~6–8 hrs)</div>
+      <div class="mt-2 font-medium">Finish with ridge caps, flashing, and snow guards and other accessories for lasting protection and a polished look.</div>
     </li>
   </ol>
 </section>
 
-<!-- PAVERS -->
-<section id="pavers" class="overflow-x-clip">
+<!-- REPAIRS -->
+<section id="repairs" class="overflow-x-clip">
   <div class="mx-auto max-w-6xl px-4 pt-24 grid lg:grid-cols-2 gap-10 items-center">
-    <!-- Visual (swap with real photos later) -->
+    <!-- Visuals -->
     <div class="relative rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl">
       <!-- soft ambient glows -->
       <div class="pointer-events-none absolute inset-0 -z-10">
         <div class="absolute -top-12 -left-12 h-72 w-72 rounded-full bg-amber-500/20 blur-3xl"></div>
       </div>
-      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 grid place-items-center text-sm text-zinc-400">
-        <img src="images/paver-3.jpg" alt="Paver Patio" class="opacity-[.85] object-cover h-full w-full">
+      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 relative flex items-center justify-center">
+        <img loading="lazy" src="images/repair-2-4.webp" alt="Metal Roof Repair" class="opacity-[.85] object-cover h-full w-full">
       </div>
       <div class="mt-3 grid grid-cols-2 gap-3">
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
-          <img src="images/paver-4.jpg" alt="Paver Patio" class="opacity-[.85] object-cover h-full w-full">
+          <img loading="lazy" src="images/repair-2-1.webp" alt="Metal Roof Seam Repair" class="opacity-[.85] object-cover h-full w-full">
         </div>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
-          <img src="images/paver-5.jpg" alt="Paver Patio" class="opacity-[.85] object-cover h-full w-full">
+          <img loading="lazy" src="images/repair-2-2.webp" alt="Metal Roof Trim Repair" class="opacity-[.85] object-cover h-full w-full">
         </div>
       </div>
     </div>
 
     <div>
       <div class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
-        <span class="text-amber-400">Paver Paths and Patios</span>
+        <span class="text-amber-400">Metal Roof Repairs</span>
         <h2 class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
-          Seamlessly blend Durability with Timeless Style
+          Restore Strength, Seal, and Style
         </h2>
       </div>
 
       <p class="mt-4 text-zinc-300 max-w-xl">
-        Paver Paths and Patios offer a versatile, attractive surface that resists shifting and wear while enhancing outdoor spaces with a timeless, modern appeal.
+        Our metal roof repair services fix leaks, damaged seams, loose panels, and worn trim to keep your roof secure and weather-tight. We reseal joints, replace fasteners, and repair flashing or edge details to restore durability and appearance while extending the roof’s lifespan.
       </p>
 
       <div class="mt-8 flex flex-wrap">
@@ -261,41 +261,42 @@
     </div>
   </div>
 </section>
-<!-- PAVERS how it works -->
-<section id="paverworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
+<!-- REPAIRS how it works -->
+<section id="repairsworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
   <ol class="mt-6 grid gap-4 lg:grid-cols-4">
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 1</div>
-      <div class="mt-2 font-medium">Site visit, layout planning, and base prep (grading and compaction)</div>
+      <div class="mt-2 font-medium">Inspect roof for leaks, loose seams, and worn trim or flashing.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 2</div>
-      <div class="mt-2 font-medium">Set borders, edge restraints, and prepare the bedding sand layer</div>
+      <div class="mt-2 font-medium">Tighten fasteners and reseal seams with high-performance sealant.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 3</div>
-      <div class="mt-2 font-medium">Lay pavers in the chosen pattern, cutting edges for a precise fit</div>
+      <div class="mt-2 font-medium">Repair or replace damaged trim and flashing to ensure a watertight finish.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 4</div>
-      <div class="mt-2 font-medium">Compact, sweep in joint sand, and seal for stability and long-lasting finish</div>
+      <div class="mt-2 font-medium">Clean, inspect, and verify all repairs for long-term protection and appearance.</div>
     </li>
   </ol>
 </section>
 
-<!-- REPAIR -->
-<section id="repair" class="overflow-x-clip">
+
+<!-- ACCESSORIES -->
+<section id="accessories" class="overflow-x-clip">
   <div class="mx-auto max-w-6xl px-4 pt-24 grid lg:grid-cols-2 gap-10 items-center">
     <div>
       <div class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
-        <span class="text-amber-400">Concrete Repair</span>
+        <span class="text-amber-400">Snow Guards & Trim Accessories</span>
         <h2 class="mt-4 text-2xl/tight sm:text-3xl lg:text-4xl font-extrabold">
-          Protect and Restore to near Original form
+          Safety, Protection, and a Clean Finished Look
         </h2>
       </div>
 
       <p class="mt-4 text-zinc-300 max-w-xl">
-        Restore strength and extend life with concrete crack and edge repair that protects while reviving the original look.
+        Add function and style with snow retention systems, ridge caps, and custom trim accessories that keep snow and ice from sliding off your roof. Our trims and flashing create a clean, polished appearance while sealing out moisture for long-term performance.
       </p>
 
       <div class="mt-8 flex flex-wrap">
@@ -307,47 +308,53 @@
 
     <!-- Visual (swap with real photos later) -->
     <div class="rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl">
-      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 grid place-items-center text-sm text-zinc-400">
-        <img src="images/repair-3.jpg" alt="Concrete Repair" class="opacity-[.85] object-cover h-full w-full">
+      <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 relative flex items-center justify-center">
+        <img loading="lazy" src="images/accessories-1.webp" alt="Snow Guards and Trim Accessories" class="opacity-[.85] object-cover h-full w-full">
       </div>
       <div class="mt-3 grid grid-cols-2 gap-3">
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
-          <img src="images/repair-4.jpg" alt="Concrete Repair" class="opacity-[.85] object-cover h-full w-full">
+          <img loading="lazy" src="images/accessories-2.webp" alt="Metal Roof Trim" class="opacity-[.85] object-cover h-full w-full">
         </div>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900 grid place-items-center text-xs text-zinc-500">
-          <img src="images/repair-5.jpg" alt="Concrete Repair" class="opacity-[.85] object-cover h-full w-full">
+          <img loading="lazy" src="images/accessories-3.webp" alt="Snow Guard Installation" class="opacity-[.85] object-cover h-full w-full">
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- REPAIR how it works -->
-<section id="repairworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
+<!-- ACCESSORIES how it works -->
+<section id="accessoriesworks" class="mx-auto max-w-6xl px-4 pb-24 scroll-mt-24">
   <ol class="mt-6 grid gap-4 lg:grid-cols-4">
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 1</div>
-      <div class="mt-2 font-medium">Site visit, clean and prep cracks or damaged edges</div>
+      <div class="mt-2 font-medium">Inspect roof for proper slope, panel layout, and attachment points.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 2</div>
-      <div class="mt-2 font-medium">Fill with high-strength repair material</div>
+      <div class="mt-2 font-medium">Install snow guards or retention bars in strategic locations to control snow movement.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 3</div>
-      <div class="mt-2 font-medium">Smooth, level, and blend the repair</div>
+      <div class="mt-2 font-medium">Fit and fasten ridge caps, trim, and flashing for a secure, seamless finish.</div>
     </li>
     <li class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <div class="text-amber-400 text-sm">Step 4</div>
-      <div class="mt-2 font-medium">Cure and finish for a lasting look</div>
+      <div class="mt-2 font-medium">Inspect all attachments and seal points to ensure long-term durability and appearance.</div>
     </li>
   </ol>
 </section>
+
 
 <!-- Pricing -->
 <section id="pricing" class="mx-auto max-w-6xl px-4 pt-24 pb-16 scroll-mt-24">
   <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-8">
     <h2 class="text-2xl font-semibold">Transparent pricing</h2>
-    <p class="mt-2 text-zinc-300">Most projects range from <span class="font-medium text-white">$12–320 per sq ft</span>. Site prep, depth, materials, and finish affect final price. While there are many variables, we provide an <span class="font-medium text-white">itemized, firm quote guaranteed for 30 days</span> after your site visit.</p>
+    <p class="mt-2 text-zinc-300">
+      Most metal roofing projects range from 
+      <span class="font-medium text-white">$8–$16 sq/ft</span>. 
+      Roof pitch, panel type, trim complexity, and material gauge all affect final pricing. 
+      <br><span class="font-medium text-white">Every quote is itemized and guaranteed for 30 days so you know exactly what you’re getting.</span>
+    </p>
     <div class="mt-6 flex flex-wrap gap-3">
       <a href="#contact" class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-900 font-medium">Get a Quote</a>
       <a href="#faq" class="cursor-pointer rounded-2xl px-5 py-3 border border-white/15 hover:bg-white/5">Read FAQs</a>
@@ -359,13 +366,56 @@
 <section id="difference" class="max-w-6xl mx-auto px-4 py-16">
   <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
     <h2 class="text-2xl font-semibold">What makes us different</h2>
-    <p class="mt-2 text-zinc-300">With years of experience in northern climates, we understand what it takes for outdoor surfaces to withstand harsh weather and still look great. Our focus is on proper base work, durable materials, and finishes that hold up over time.</p>
+    <p class="mt-2 text-zinc-300">
+      Living and working in the UP means we build roofs that can actually handle what winter throws at them. We focus on solid installs, clean details, and communication that’s upfront and honest. No surprises, no shortcuts—just quality work built for this climate.
+    </p>
     <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-zinc-300">
-      <li>✔️ Built for freeze-thaw cycles and snow removal</li>
-      <li>✔️ Careful prep work before every install or repair</li>
-      <li>✔️ High-quality materials chosen for strength and longevity</li>
-      <li>✔️ Clear communication and dependable service from start to finish</li>
+      <li>✔️ Built specifically for heavy snow, ice, and wind</li>
+      <li>✔️ Clean, accurate flashing and trim work for leak-free performance</li>
+      <li>✔️ High-quality metals rated for northern climates</li>
+      <li>✔️ Clear communication and reliable scheduling—no runaround</li>
     </ul>
+  </div>
+</section>
+
+<!-- WARRANTY -->
+<section id="warranty" class="max-w-6xl mx-auto px-4 py-16 scroll-mt-24">
+  <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
+    <h2 class="text-2xl font-semibold">Warranty & Peace of Mind</h2>
+
+    <p class="mt-3 text-zinc-300">
+      Every standing seam metal roof I install comes with a workmanship warranty that covers any
+      issues caused by installation errors. If something wasn’t done right, I fix it — no charge,
+      no excuses.
+    </p>
+
+    <p class="mt-3 text-zinc-300">
+      All materials are backed by manufacturer warranties, including protection for paint, coating,
+      and panel performance. Your roof is covered from both sides — built to last and backed with confidence.
+    </p>
+
+    <p class="mt-3 text-zinc-300">
+      My goal is simple: a roof that stands up to UP winters, year after year. If you ever have a concern,
+      just give me a call and I’ll take a look.
+    </p>
+  </div>
+</section>
+
+<!-- About Me -->
+<section id="about" class="max-w-6xl mx-auto px-4 py-16">
+  <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
+    <h2 class="text-2xl font-semibold">About Me</h2>
+    <p class="mt-3 text-zinc-300">
+      My name is Brian, and I’ve lived and worked across the Upper Peninsula for years. From welding and fabrication to 
+      construction and roofing, I’ve spent my career building things that need to hold up in real UP weather.
+    </p>
+    <p class="mt-3 text-zinc-300">
+      I started UP Surfaces because I take pride in clean workmanship, honest communication, and showing up when I say I will.
+      Whether it’s a new standing seam roof or a simple repair, my goal is to leave every job looking sharp and built to last.
+    </p>
+    <p class="mt-3 text-zinc-300">
+      If you want straight answers, reliable work, and roofing done the right way, I’d be glad to take a look at your project.
+    </p>
   </div>
 </section>
 
@@ -375,26 +425,31 @@
   <div class="mt-6 grid gap-4">
     <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <summary class="cursor-pointer font-medium">How long does installation take?</summary>
-      <p class="mt-2 text-sm text-zinc-300">Most projects are completed in 1–2 days once the base is ready, though larger areas or complex layouts may take longer.</p>
+      <p class="mt-2 text-sm text-zinc-300">Most standing seam metal roofs are installed in 3–5 days, depending on roof size, slope, and trim complexity. Smaller or simpler roofs can be completed even faster.</p>
     </details>
+
     <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
-      <summary class="cursor-pointer font-medium">Do you replace old surfaces or work over them?</summary>
-      <p class="mt-2 text-sm text-zinc-300">We can repair and refinish existing concrete or asphalt, or build new paver installations depending on your site’s condition.</p>
+      <summary class="cursor-pointer font-medium">Can you repair an existing metal roof?</summary>
+      <p class="mt-2 text-sm text-zinc-300">Yes. We specialize in repairing leaks, seams, and trim on existing metal roofs, extending their life and maintaining a clean, professional appearance.</p>
     </details>
+
     <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
-      <summary class="cursor-pointer font-medium">How do your surfaces hold up in winter?</summary>
-      <p class="mt-2 text-sm text-zinc-300">All of our work is designed for freeze–thaw cycles and snow removal, using materials that perform well in northern climates.</p>
+      <summary class="cursor-pointer font-medium">How does a metal roof handle snow and ice?</summary>
+      <p class="mt-2 text-sm text-zinc-300">Metal roofs naturally shed snow and ice, preventing buildup and excess weight. We also install snow guards to control the slide and improve safety around your home or building.</p>
     </details>
+
     <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <summary class="cursor-pointer font-medium">What’s included in the quote?</summary>
-      <p class="mt-2 text-sm text-zinc-300">Every quote is itemized and firm for 30 days, covering site prep, materials, and labor — no hidden costs.</p>
+      <p class="mt-2 text-sm text-zinc-300">Your quote includes materials, panels, trim, flashing, snow guards if requested, and full installation. We provide a detailed, itemized estimate with no hidden costs.</p>
     </details>
+
     <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
       <summary class="cursor-pointer font-medium">How soon can you start my project?</summary>
-      <p class="mt-2 text-sm text-zinc-300">Lead times are typically 2–4 weeks during peak season; we’ll confirm your schedule during the site visit.</p>
+      <p class="mt-2 text-sm text-zinc-300">Typical lead times are 2–4 weeks during peak season. After your site visit, we’ll confirm a schedule that works best for your timeline and weather conditions.</p>
     </details>
   </div>
 </section>
+
 
 <!-- Contact -->
 <section id="contact" class="mx-auto max-w-6xl px-4 py-16 scroll-mt-24">
@@ -412,20 +467,13 @@
     </div>
 
     <!-- Contact form (Netlify Forms) -->
-    <form id="contactForm"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          class="grid gap-4 max-w-md mx-auto bg-white/5 border border-white/10 p-6 rounded-2xl">
-
+    <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid gap-4 max-w-md mx-auto bg-white/5 border border-white/10 p-6 rounded-2xl">
       <!-- Netlify needs this hidden pair -->
       <input type="hidden" name="form-name" value="contact">
       <!-- Honeypot (spam trap) -->
       <p class="hidden">
         <label>Don’t fill this out: <input name="bot-field"></label>
       </p>
-
       <div>
         <label for="name" class="block text-sm mb-1">Name</label>
         <input name="name" autocomplete="name" required class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2" placeholder="Your name"/>
@@ -442,7 +490,7 @@
         <label class="block text-sm mb-1" for="city">Project Location (city)</label>
         <div class="relative">
           <select id="city" name="city" required
-            class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2 pr-10 appearance-none">
+            class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2 pr-10 appearance-none cursor-pointer">
             <option value="" disabled selected>Select a city</option>
             <optgroup label="Marquette County">
               <option>Marquette</option>
@@ -468,7 +516,6 @@
             </optgroup>
             <option value="other">Other</option>
           </select>
-
           <!-- chevron -->
           <svg aria-hidden="true"
               class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 opacity-70"
@@ -483,22 +530,43 @@
       </div>
       <div>
         <label for="details" class="block text-sm mb-1">Project details</label>
-        <textarea name="details" required minlength="10" rows="4" class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2" placeholder="Driveway or walkway? Approximate dimensions? New or existing base?"></textarea>
+        <textarea name="details"rows="4" class="w-full rounded-xl bg-neutral-900 border border-white/10 px-3 py-2" placeholder="Residential or commercial roof? Approximate square footage, roof pitch, and any known issues (leaks, loose panels, trim repair, etc.)?"></textarea>
       </div>
-      
+
+      <!-- R2 file upload (plans/designs) -->
+      <div class="grid gap-2">
+        <div class="flex items-center justify-between">
+          <label class="block text-sm">Attach plans / designs (optional)</label>
+          <span class="text-xs text-zinc-500" id="r2Hint">PDF/images recommended</span>
+        </div>
+        <!-- Hidden native file input -->
+        <input id="planFiles" type="file" multiple accept=".pdf,image/*,.dwg,.dxf,.heic" class="hidden" />
+        <!-- Pretty picker row -->
+        <div class="flex items-center gap-3">
+          <label for="planFiles" class="cursor-pointer rounded-2xl px-4 py-2 bg-white/5 border border-white/10 hover:bg-white/10 text-sm" >
+            Choose files
+          </label>
+          <div id="fileName" class="text-xs text-zinc-400 truncate">
+            No files selected
+          </div>
+        </div>
+        <button type="button" id="uploadBtn" class="rounded-2xl px-4 py-2 border border-white/15 hover:bg-white/5 text-sm">
+          Upload selected files
+        </button>
+        <div class="text-xs text-zinc-400" id="uploadStatus">No files uploaded yet.</div>
+        <ul class="text-xs text-zinc-300 list-disc list-inside" id="uploadedList"></ul>
+        <input type="hidden" name="r2_files" id="r2_files" value="[]">
+        <input type="hidden" name="r2_upload_state" id="r2_upload_state" value="none">
+      </div>
+
       <!-- optional metadata -->
       <input type="hidden" name="source" value="upsurfaces.com">
       <input type="hidden" name="page"   value="/#contact">
-      
       <div data-netlify-recaptcha="true"></div>
-
-      <button id="submitBtn" type="submit"
-        class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium">
+      <button id="submitBtn" type="submit" class="cursor-pointer rounded-2xl px-5 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium">
         Send Request
       </button>
-    
       <p class="text-xs text-zinc-400">By submitting, you consent to be contacted about your project. No spam—ever.</p>
-      
       <p id="formMsg" class="hidden text-sm mt-2"></p>
     </form>
   </div>
@@ -526,7 +594,7 @@
     
     <!-- Logo + copyright -->
     <div class="flex items-center gap-2">
-      <img src="images/logo-notxt.png" alt="UP Surfaces logo" class="h-6 w-auto"/>
+      <img loading="lazy" src="images/logo-notxt.webp" alt="UP Surfaces logo" class="h-6 w-auto"/>
       <span>© <span id="year"></span> UP Surfaces. All rights reserved.</span>
     </div>
 

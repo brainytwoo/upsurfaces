@@ -125,14 +125,19 @@ else {
 
       if (!res.ok) throw new Error('Form submit failed');
 
-      form.reset();
-      cityOther.classList.add('hidden');
-      cityOther.setAttribute('aria-hidden', 'true');
-      cityOther.removeAttribute('required');
-      cityOther.value = '';
-
       // show toast success
       showToast('Thanks! We received your request. We’ll reply within one business week.', 'success');
+
+      // lock the form in-place after success
+      Array.from(form.elements).forEach(el => {
+        el.disabled = true;
+        el.classList.add('opacity-60', 'cursor-not-allowed');
+      });
+
+      // also lock custom upload controls
+      document.getElementById('uploadBtn')?.setAttribute('disabled', 'true');
+      document.getElementById('uploadBtn')?.classList.add('opacity-60', 'cursor-not-allowed');
+      document.querySelector('label[for="planFiles"]')?.classList.add('opacity-60', 'pointer-events-none');
 
       // mark button as done
       submitBtn.textContent = "Done!";
@@ -150,6 +155,100 @@ else {
     }
   });
 }
+
+// --- R2 Uploads (client -> presigned URL -> PUT to R2) ---
+const planFilesEl   = document.getElementById('planFiles');
+const uploadBtn     = document.getElementById('uploadBtn');
+const uploadStatus  = document.getElementById('uploadStatus');
+const uploadedList  = document.getElementById('uploadedList');
+const r2FilesHidden = document.getElementById('r2_files');
+const r2StateHidden = document.getElementById('r2_upload_state');
+
+let uploaded = []; // { name, url, key }
+
+function setUploadState(state, msg) {
+  if (r2StateHidden) r2StateHidden.value = state;
+  if (uploadStatus) uploadStatus.textContent = msg || '';
+}
+
+function renderUploaded() {
+  if (!uploadedList) return;
+  uploadedList.innerHTML = '';
+  uploaded.forEach(f => {
+    const li = document.createElement('li');
+    li.textContent = `${f.name} (uploaded)`;
+    uploadedList.appendChild(li);
+  });
+  if (r2FilesHidden) r2FilesHidden.value = JSON.stringify(uploaded.map(x => x.url));
+}
+
+async function presign(file) {
+  const res = await fetch('/.netlify/functions/r2-presign', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      filename: file.name,
+      contentType: file.type || 'application/octet-stream'
+    })
+  });
+  if (!res.ok) throw new Error('Failed to get upload URL');
+  return res.json(); // { uploadUrl, publicUrl, key }
+}
+
+async function uploadOne(file) {
+  const { uploadUrl, publicUrl, key } = await presign(file);
+
+  const put = await fetch(uploadUrl, {
+    method: 'PUT',
+    headers: { 'Content-Type': file.type || 'application/octet-stream' },
+    body: file
+  });
+  if (!put.ok) throw new Error(`Upload failed: ${file.name}`);
+
+  uploaded.push({ name: file.name, url: publicUrl, key });
+  renderUploaded();
+}
+
+uploadBtn?.addEventListener('click', async () => {
+  const files = planFilesEl?.files ? Array.from(planFilesEl.files) : [];
+  if (!files.length) {
+    setUploadState('none', 'Pick files first.');
+    return;
+  }
+
+  uploadBtn.disabled = true;
+  setUploadState('uploading', `Uploading ${files.length} file(s)...`);
+
+  try {
+    for (const f of files) await uploadOne(f);
+    setUploadState('done', `Uploaded ${files.length} file(s). You can submit the form now.`);
+  } catch (e) {
+    console.error(e);
+    setUploadState('error', 'Upload failed. Try again or submit without attachments.');
+  } finally {
+    uploadBtn.disabled = false;
+  }
+});
+
+const fileName = document.getElementById('fileName');
+
+planFilesEl?.addEventListener('change', () => {
+  const files = planFilesEl.files ? Array.from(planFilesEl.files) : [];
+  if (!fileName) return;
+
+  if (!files.length) fileName.textContent = 'No files selected';
+  else if (files.length === 1) fileName.textContent = files[0].name;
+  else fileName.textContent = `${files.length} files selected`;
+});
+
+
+// OPTIONAL (recommended): prevent form submit while uploads running
+form?.addEventListener('submit', (e) => {
+  if (r2StateHidden?.value === 'uploading') {
+    e.preventDefault();
+    showToast('Uploads are still running — wait for them to finish.', 'error');
+  }
+});
 
 // Form submission test
 function testSubmit() {

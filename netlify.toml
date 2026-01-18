@@ -1,12 +1,16 @@
-netlify[build]
-  command = "npx tailwindcss -i ./src/input.css -o ./src/styles.css --minify"
-  publish = "src"
-  [[headers]]
+[build]
+  command = "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify"
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+[[headers]]
   for = "/*"
   [headers.values]
-  Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
-  Referrer-Policy = "strict-origin-when-cross-origin"
-  X-Content-Type-Options = "nosniff"
-  X-Frame-Options = "DENY"
-  Permissions-Policy = "geolocation=()"
-  Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com https://www.recaptcha.net https://static.cloudflareinsights.com; frame-src https://www.google.com https://www.recaptcha.net; connect-src 'self' https://*.r2.cloudflarestorage.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net https://static.cloudflareinsights.com; img-src 'self' data: https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
